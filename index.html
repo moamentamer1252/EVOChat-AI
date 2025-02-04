@@ -24,7 +24,7 @@
 
         .chat-container {
             width: 370px;
-            height: 555px;
+            height: 642px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             backdrop-filter: blur(15px);
@@ -145,13 +145,17 @@
         .chat-input img:hover {
             transform: scale(1.1);
         }
+        span{
+            color: red;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="chat-container">
-        <div class="chat-header">EVOChat</div>
+        <div class="chat-header"><span>EVO</span> Chat</div>
         <div class="chat-box" id="chat-box">
-            <div class="message bot-message">"I am EvoChat, an AI assistant created by MoTc Software. You can write anything to me, and I will help you!"</div>
+            <div class="message bot-message">"I am EvoChat, an AI assistant created by span MoTc Software. You can write anything to me, and I will help you!"</div>
         </div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Type a message...">
