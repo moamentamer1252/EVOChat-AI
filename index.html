@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVOChat - AI </title>
+    <title>EVOChat - AI</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,18 +19,17 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             background: linear-gradient(135deg, #0f0f17, #1a1a2e);
             overflow: hidden;
         }
 
         .chat-container {
-            width: 370px;
-            height: 642px;
+            width: 100vw;
+            height: 100vh;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
             backdrop-filter: blur(15px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
             display: flex;
             flex-direction: column;
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -68,11 +68,10 @@
         .message {
             padding: 12px 18px;
             border-radius: 15px;
-            max-width: 80%;
+            max-width: 70%;
             word-wrap: break-word;
             line-height: 1.6;
             font-size: 15px;
-            transition: all 0.3s ease-in-out;
             opacity: 0;
             transform: translateY(10px);
             animation: fadeIn 0.5s forwards;
@@ -121,24 +120,18 @@
             font-size: 14px;
             background: rgba(0, 0, 0, 0.233);
             color: white;
-            backdrop-filter: blur(15px);
-            transition: 0.3s;
-            height: 32px;
+            height: 40px;
         }
 
         .chat-input input::placeholder {
             color: rgba(255, 255, 255, 0.6);
         }
 
-        .chat-input input:focus {
-            background: rgba(83, 83, 83, 0.3);
-        }
-
         .chat-input img {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
-            margin-left: 5px;
+            margin-left: 10px;
             transition: 0.3s;
         }
 
@@ -146,51 +139,16 @@
             transform: scale(1.1);
         }
         span{
-            color:#4a90e2;
+            color: #4a90e2;
             font-weight: bold;
         }
-        @media screen and (max-width: 768px) {
-    .chat-container {
-        width: 100%;
-        height: 100vh;
-        max-height: 1000px;
-    }
-
-    .chat-header {
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .chat-box {
-        padding: 15px;
-    }
-
-    .message {
-        font-size: 14px;
-        padding: 10px 15px;
-    }
-
-    .chat-input {
-        padding: 10px;
-    }
-
-    .chat-input input {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .chat-input img {
-        width: 30px;
-        height: 30px;
-    }
-}
     </style>
 </head>
 <body>
     <div class="chat-container">
         <div class="chat-header"><span>EVO</span> Chat</div>
         <div class="chat-box" id="chat-box">
-            <div class="message bot-message">"I am EvoChat, an AI assistant created by span MoTc Software. You can write anything to me, and I will help you!"</div>
+            <div class="message bot-message">"I am EvoChat, an AI assistant created by MoTc Software. You can write anything to me, and I will help you!"</div>
         </div>
         <div class="chat-input">
             <input type="text" id="user-input" placeholder="Type a message...">
@@ -214,7 +172,7 @@
 
             let botMessage = document.createElement("div");
             botMessage.classList.add("message", "bot-message");
-            botMessage.textContent = "Type...";
+            botMessage.textContent = "Typing...";
             chatBox.appendChild(botMessage);
             chatBox.scrollTop = chatBox.scrollHeight;
 
