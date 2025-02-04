@@ -17,7 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 110vh;
+            height: 100vh;
             background: linear-gradient(135deg, #0f0f17, #1a1a2e);
             overflow: hidden;
         }
@@ -149,6 +149,40 @@
             color:#4a90e2;
             font-weight: bold;
         }
+        @media screen and (max-width: 768px) {
+    .chat-container {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .chat-header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .chat-box {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .chat-input {
+        padding: 10px;
+    }
+
+    .chat-input input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .chat-input img {
+        width: 30px;
+        height: 30px;
+    }
+}
     </style>
 </head>
 <body>
